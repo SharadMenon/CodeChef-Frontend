@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat Copy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="flex justify-center font-serif text-[0.8rem] bg-slate-100 h-8 z-10">
+<p class="mt-2">Playback: 150 Hrs | Sound: Sublime | Price: <b>₹1199</b> <c class="line-through">₹1499</c> | Shop <b>Rockerz Trinity</b> using: <b>TAKE300</b></p>
+</div>
+<nav id="navbar" class="z-30 px-10 mt-4 h-20 justify-start py-2 flex space-x-10 top-0 fixed w-full text-[1.1rem] bg-white">
+                <img src="/assets/boAt_logo_small_3067da8c-a83b-46dd-b28b-6ef1e16ccd17_small.png" class="mt-3 h-9" />
+                <div class="mt-3 pl-10 relative group" id="hover-dropdown">
+                    <span class="flex hover:font-bold cursor-pointer" id="dropdownMenuButton1" aria-expanded="false">
+                      Categories <svg class="mt-1" height="20px" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </span>
+            
+                    <ul class="absolute hidden space-y-1 bg-white border rounded-md shadow-md group-hover:block" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="block px-4 py-2 text-sm text-gray-700" href="#">Action</a></li>
+                      <li><a class="block px-4 py-2 text-sm text-gray-700" href="#">Another action</a></li>
+                      <li><a class="block px-4 py-2 text-sm text-gray-700" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                  
+                <a href="#About" class="mt-3 hover:font-bold hide3 cursor-pointer">boAt Personalisation</a>
+                <a href="#Skills" class="mt-3 hover:font-bold hide3 cursor-pointer">Gift with boAt</a>
+                <a href="#Projects" class="mt-3 hover:font-bold hide3 cursor-pointer">Corporate Orders</a>
+                <div class="mt-3 relative group mr-10" id="hover-dropdown">
+                    <span class="flex hover:font-bold cursor-pointer" id="dropdownMenuButton1" aria-expanded="false">
+                        More <svg class="mt-1" height="20px" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </span>
+                    <ul class="absolute hidden space-y-1 bg-white border rounded-md shadow-md group-hover:block" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="block px-4 py-2 text-sm text-gray-700" href="#">Action</a></li>
+                      <li><a class="block px-4 py-2 text-sm text-gray-700" href="#">Another action</a></li>
+                      <li><a class="block px-4 py-2 text-sm text-gray-700" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                <search class="">
+                    <svg class="absolute ml-[9.5rem] mt-[1.1rem]"  height="20px" width="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>search</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-256.000000, -1139.000000)" fill="#000000"> <path d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z" id="search" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                    <input id="searching" placeholder="" class="mt-3 w-52 bg-slate-200  ml-36 rounded-lg border-0 text-center"/>
+                    
+                </search>
+                
+                <svg class="mt-4 hover:cursor-pointer" height="20px" width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="5.632"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M256,265.308c73.252,0,132.644-59.391,132.644-132.654C388.644,59.412,329.252,0,256,0 c-73.262,0-132.643,59.412-132.643,132.654C123.357,205.917,182.738,265.308,256,265.308z"></path> <path class="st0" d="M425.874,393.104c-5.922-35.474-36-84.509-57.552-107.465c-5.829-6.212-15.948-3.628-19.504-1.427 c-27.04,16.672-58.782,26.399-92.819,26.399c-34.036,0-65.778-9.727-92.818-26.399c-3.555-2.201-13.675-4.785-19.505,1.427 c-21.55,22.956-51.628,71.991-57.551,107.465C71.573,480.444,164.877,512,256,512C347.123,512,440.427,480.444,425.874,393.104z"></path> </g> </g></svg>
+                <svg class="mt-4 hover:cursor-pointer" height="20px" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5285 6C16.5098 5.9193 16.4904 5.83842 16.4701 5.75746C16.2061 4.70138 15.7904 3.55383 15.1125 2.65C14.4135 1.71802 13.3929 1 12 1C10.6071 1 9.58648 1.71802 8.88749 2.65C8.20962 3.55383 7.79387 4.70138 7.52985 5.75747C7.50961 5.83842 7.49016 5.9193 7.47145 6H5.8711C4.29171 6 2.98281 7.22455 2.87775 8.80044L2.14441 19.8004C2.02898 21.532 3.40238 23 5.13777 23H18.8622C20.5976 23 21.971 21.532 21.8556 19.8004L21.1222 8.80044C21.0172 7.22455 19.7083 6 18.1289 6H16.5285ZM8 11C8.57298 11 8.99806 10.5684 9.00001 9.99817C9.00016 9.97438 9.00044 9.9506 9.00084 9.92682C9.00172 9.87413 9.00351 9.79455 9.00718 9.69194C9.01451 9.48652 9.0293 9.18999 9.05905 8.83304C9.08015 8.57976 9.10858 8.29862 9.14674 8H14.8533C14.8914 8.29862 14.9198 8.57976 14.941 8.83305C14.9707 9.18999 14.9855 9.48652 14.9928 9.69194C14.9965 9.79455 14.9983 9.87413 14.9992 9.92682C14.9996 9.95134 14.9999 9.97587 15 10.0004C15 10.0004 15 11 16 11C17 11 17 9.99866 17 9.99866C16.9999 9.9636 16.9995 9.92854 16.9989 9.89349C16.9978 9.829 16.9957 9.7367 16.9915 9.62056C16.9833 9.38848 16.9668 9.06001 16.934 8.66695C16.917 8.46202 16.8953 8.23812 16.8679 8H18.1289C18.6554 8 19.0917 8.40818 19.1267 8.93348L19.86 19.9335C19.8985 20.5107 19.4407 21 18.8622 21H5.13777C4.55931 21 4.10151 20.5107 4.13998 19.9335L4.87332 8.93348C4.90834 8.40818 5.34464 8 5.8711 8H7.13208C7.10465 8.23812 7.08303 8.46202 7.06595 8.66696C7.0332 9.06001 7.01674 9.38848 7.00845 9.62056C7.0043 9.7367 7.00219 9.829 7.00112 9.89349C7.00054 9.92785 7.00011 9.96221 7 9.99658C6.99924 10.5672 7.42833 11 8 11ZM9.53352 6H14.4665C14.2353 5.15322 13.921 4.39466 13.5125 3.85C13.0865 3.28198 12.6071 3 12 3C11.3929 3 10.9135 3.28198 10.4875 3.85C10.079 4.39466 9.76472 5.15322 9.53352 6Z" fill="#0F0F0F"></path> </g></svg>
+</nav>
+<div class="relative h-[40rem] mt-20 overflow-hidden z-0">
+    <img src="/assets/Nirvana_ION-New-colors_WEB_1600x-1.png" class="transition-[1s] absolute w-[100%] slide">
+    <img src="assets/RS_Banner_WEB_1_1440x.png" class="transition-[1s] absolute w-[100%] slide">
+    <img src="assets/Lunar_Embrace_Banner_WEB_1600x.png" class="transition-[1s] absolute w-[100%] slide">
+    <img src="assets/RS_Banner_WEB_2_1440x.png" class="transition-[1s] absolute w-[100%] slide">
+</div>
+<div class="text-center flex justify-center space-x-5">
+    <button onclick="goPrev()" class="">
+        <
+    </button>
+    <button onclick="goNext()">
+        >
+    </button>
+</div>
+
+<h1 class="text-2xl mt-6 ml-6">Explore <b class="border-b-2 border-orange-500">Bestsellers</b></h1>
+<div class="flex mt-3 ml-5">
+    <div>
+    <video class="flex flex-col rounded-lg h-96 w-96 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/smartwatchvideo.mp4" alt="Smartwatch" type="video/mp4">
+    </video>
+    <a href="https://www.boat-lifestyle.com/collections/smart-watches"><p class="text-center mt-2">Smartwatch</p></a>
+</div>
+<div>
+    <video class="flex flex-col rounded-lg h-96 w-96 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/Wireless_earbudsvideo.mp4" alt="Smartwatch" type="video/mp4">
+    </video>
+    <a href="https://www.boat-lifestyle.com/collections/true-wireless-earbuds"><p class="text-center">Wireless Earbuds</p></a>
+</div>
+<div>
+    <video class="flex flex-col rounded-lg h-96 w-96 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/Neckbandsvideo.mp4" alt="Smartwatch" type="video/mp4">
+    </video>
+    <a href="https://www.boat-lifestyle.com/collections/wireless-earphones"><p class="text-center">Neckbands</p></a>
+</div>
+<div>
+    <video class="flex flex-col rounded-lg h-96 w-96 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/Headphonesvideo.mp4" alt="Smartwatch" type="video/mp4">
+    </video>
+    <a href="https://www.boat-lifestyle.com/collections/rockerz-headphones"><p class="text-center">Headphones</p></a>
+</div>
+</div>
+<h1 class="text-2xl mt-6 ml-6">Daily <b class="border-b-2 border-orange-500">Deals</b></h1>
+<div class="w-[95%] mt-3 mb-10 flex justify-center rounded-xl object-cover h-32 ml-5 bg-cover">
+<img class="w-[100%] rounded-xl" src="assets/daily_deals-ezgif.com-webp-to-png-converter.png">
+</div>
+<div class="flex mt-3 ml-5">
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/nirvana-ion-bluetooth-wireless-earbuds"><img class="object-cover w-full h-full rounded-lg" src="assets/Nirvana_Ion.jpg" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>120 hours playback</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Nirvana Ion</p>
+            <b class="flex items-center space-x-2"><p>₹2299</p> <p class="text-gray-400 line-through">  ₹7990</p> <p class="text-green-400">71% off</p></b>
+            <p class="text-yellow-400">⭐5.0</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/airdopes-131"><img class="object-cover w-full h-full rounded-lg" src="assets/Airdopes131.jpg" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>60 hours playback</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Airdopes 131</p>
+            <b class="flex items-center space-x-2"><p>₹899</p> <p class="text-gray-400 line-through">  ₹2999</p> <p class="text-green-400">70% off</p></b>
+            <p class="text-yellow-400">⭐4.8</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/airdopes-161"><img class="object-cover w-full h-full rounded-lg" src="assets/Airdopes161.jpg" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>40 hours playback</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Airdopes 161</p>
+            <b class="flex items-center space-x-2"><p>₹999</p> <p class="text-gray-400 line-through">  ₹2490</p> <p class="text-green-400">60% off</p></b>
+            <p class="text-yellow-400">⭐4.9</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/rockerz-255-max-large-playback-neckband"><img class="object-cover w-full h-full rounded-lg" src="assets/Rockerz255Max.jpg" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>60 hours playback</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Rockerz 255 Max</p>
+            <b class="flex items-center space-x-2"><p>₹1299</p> <p class="text-gray-400 line-through">  ₹3999</p> <p class="text-green-400">68% off</p></b>
+            <p class="text-yellow-400">⭐5.0</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+</div>
+<h1 class="text-2xl ml-6 mt-48">Shop by <b class="border-b-2 border-orange-500">Categories</b></h1>
+<div class="flex mt-20 ml-5 space-x-2">
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/true-wireless-earbuds"><img class="object-cover w-full h-full rounded-lg" src="assets/True-wireless-earbuds_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">True Wireless earbuds</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/wireless-earphones"><img class="object-cover w-full h-full rounded-lg" src="assets/Neckbands_category.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Neckbands</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/smart-watches"><img class="object-cover w-full h-full rounded-lg" src="assets/Smartwatches_88f12bcf-24bd-4e3a-aacb-ecc204f62179_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">SmartWatches</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/rockerz-headphones"><img class="object-cover w-full h-full rounded-lg" src="assets/Wireless-Headphones_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Wireless headphones</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/wireless-speakers"><img class="object-cover w-full h-full rounded-lg" src="assets/Wireless-Speaker_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Wireless speakers</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/wired-headphones"><img class="object-cover w-full h-full rounded-lg" src="assets/Wired-Earphones_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Wired earphones</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/home-audio"><img class="object-cover w-full h-full rounded-lg" src="assets/Soundbars_d9a7bdfd-e780-4581-ab85-f2e86f84cd28_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Soundbars</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/immortal-gaming"><img class="object-cover w-full h-full rounded-lg" src="assets/Gaming-Headphones_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Gaming headphones</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/wireless-speakers"><img class="object-cover w-full h-full rounded-lg" src="assets/party_speakers.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Party speakers</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/misfit-by-boat"><img class="object-cover w-full h-full rounded-lg" src="assets/Trimmers_d0d346cf-b681-49b6-8942-835819bec2d1_small.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Trimmers</p>
+    </div>
+    <div class="flex flex-col rounded-lg h-32 w-32 bg-cover">
+        <a href="https://www.boat-lifestyle.com/collections/chargers"><img class="object-cover w-full h-full rounded-lg" src="assets/Chargers_c290cb92-f132-412c-8387-f399a7aba423_small-ezgif.com-webp-to-png-converter.png" alt="Smartwatch"></a>
+        <p class="text-center w-32 hover:cursor-pointer">Chargers</p>
+    </div>
+</div>
+<h1 class="text-2xl ml-6 mt-20">New <b class="border-b-2 border-orange-500">Launches</b></h1>
+<div class="flex mt-3 ml-5">
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/stone-spinx-pro-bluetooth-speaker"><img class="object-cover w-full h-full rounded-lg" src="assets/Stone_Spinx_Pro.png" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>8 hours playback</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Stone Spinx Pro</p>
+            <b class="flex items-center space-x-2"><p>₹2999</p> <p class="text-gray-400 line-through">  ₹9999</p> <p class="text-green-400">70% off</p></b>
+            <p class="text-yellow-400">⭐5.0</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/ultima-select-amoled-display-smartwatch"><img class="object-cover w-full h-full rounded-lg" src="assets/Ultima_Select.png" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>Amoled Display</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Ultima Select</p>
+            <b class="flex items-center space-x-2"><p>₹2999</p> <p class="text-gray-400 line-through">  ₹12,999</p> <p class="text-green-400">77% off</p></b>
+            <p class="text-yellow-400 ">⭐5.0</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+            <a href="https://www.boat-lifestyle.com/products/lunar-link-round-tft-display-smartwatch"><img class="object-cover w-full h-full rounded-lg" src="assets/Lunar_Link.png" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>Round Display</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Lunar Link</p>
+            <b class="flex items-center space-x-2"><p>₹1499</p> <p class="text-gray-400 line-through">  ₹6999</p> <p class="text-green-400">79% off</p></b>
+            <p class="text-yellow-400">⭐5.0</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/nirvana-ion-anc-earbuds"><img class="object-cover w-full h-full rounded-lg" src="assets/ION_ANC__1.png" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20 mt-[-2rem]"><p>Noise cancellation</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Nirvana Ion ANC</p>
+            <b class="flex items-center space-x-2"><p>₹2799</p> <p class="text-gray-400 line-through">  ₹9990</p> <p class="text-green-400">72% off</p></b>
+            <p class="text-yellow-400">⭐4.9</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+    </div>
+</div>
+<div class="flex justify-center mt-48 space-x-32">
+    <div class="flex-col">
+        <svg height="6.5rem" width="6.5rem" fill="#000000" viewBox="0 0 32 32" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-96,-384)"> <g transform="matrix(1,0,0,1.5,0,-195)"> <path d="M123,390.139C123,389.941 122.869,389.755 122.642,389.628C122.415,389.501 122.116,389.448 121.825,389.483C119.095,389.739 115.9,389.237 113.167,387.95C112.472,387.611 111.529,387.612 110.835,387.953C108.106,389.249 104.916,389.77 102.184,389.504C101.896,389.468 101.598,389.519 101.372,389.643C101.146,389.768 101.015,389.954 101.015,390.149C101,392.424 101,398.817 101,401.141C101,401.664 101.458,402.139 102.172,402.355C104.41,403.033 109.237,404.496 111.172,405.083C111.698,405.242 112.302,405.242 112.828,405.083C114.763,404.496 119.59,403.033 121.828,402.355C122.542,402.139 123,401.664 123,401.141C123,398.813 123,392.403 123,390.139Z" style="fill:#90e0ef;"></path> </g> <path d="M124,406.712L124,390.208C124,389.616 123.738,389.055 123.284,388.675C122.836,388.3 122.247,388.14 121.671,388.236C119.171,388.584 116.25,387.878 113.747,386.109C112.704,385.354 111.293,385.357 110.253,386.116C107.762,387.889 104.859,388.626 102.364,388.272C101.772,388.168 101.183,388.323 100.734,388.695C100.279,389.072 100.015,389.633 100.015,390.224C100,393.632 100,403.225 100,406.712L100,406.712C100,407.889 100.688,408.956 101.759,409.443C103.996,410.46 108.823,412.654 110.759,413.534C111.547,413.893 112.453,413.893 113.241,413.534C115.177,412.654 120.004,410.46 122.241,409.443C123.312,408.956 124,407.889 124,406.712ZM121.999,390.208L122,390.209L122,406.712C122,407.104 121.771,407.46 121.414,407.623C119.177,408.639 114.349,410.834 112.414,411.713C112.151,411.833 111.849,411.833 111.586,411.713C109.651,410.834 104.823,408.639 102.586,407.623C102.229,407.46 102,407.104 102,406.712C102,403.231 102,393.664 102.015,390.242L102.018,390.243C104.998,390.678 108.459,389.849 111.416,387.743L111.422,387.739C111.77,387.483 112.235,387.482 112.578,387.732L112.584,387.736C115.547,389.831 119.009,390.63 121.964,390.214L121.999,390.208ZM107.293,399.707L110.44,402.854C110.83,403.244 111.463,403.244 111.854,402.854L117.748,396.96C118.138,396.57 118.138,395.936 117.748,395.546C117.357,395.155 116.724,395.155 116.334,395.546L111.147,400.732C111.147,400.732 108.707,398.293 108.707,398.293C108.317,397.903 107.683,397.903 107.293,398.293C106.903,398.683 106.903,399.317 107.293,399.707ZM122,390.209C122,390.209 122,390.209 122,390.209Z" style="fill:#1990a7;"></path> </g> </g></svg>
+        <p class="font-serif text-xl"><b>1 year</b> warranty</p>
+    </div>
+    <div class="flex-col">
+        <svg height="6.5rem" width="6.5rem" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1.5 0A1.5 1.5 0 000 1.5v5A1.5 1.5 0 001.5 8h5A1.5 1.5 0 008 6.5v-5A1.5 1.5 0 006.5 0h-5zM13.293 7.707a1 1 0 101.414-1.414L13.414 5H17.5a.5.5 0 01.5.5V9a1 1 0 102 0V5.5A2.5 2.5 0 0017.5 3h-4.086l1.293-1.293A1 1 0 0013.293.293l-3 3a1 1 0 000 1.414l3 3zM6.707 12.293a1 1 0 00-1.414 1.414L6.586 15H2.5a.5.5 0 01-.5-.5V11a1 1 0 10-2 0v3.5A2.5 2.5 0 002.5 17h4.086l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414l-3-3zM20 18.5a1.5 1.5 0 01-1.5 1.5h-5a1.5 1.5 0 01-1.5-1.5v-5a1.5 1.5 0 011.5-1.5h5a1.5 1.5 0 011.5 1.5v5z" fill="#5C5F62"></path></g></svg>
+        <p class="font-serif text-xl"><b>7-day</b> Replacement</p>
+    </div>
+    <div class="flex-col">
+        <svg height="6.5rem" width="6.5rem" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1,.cls-2{fill:none;stroke:#000000;stroke-linejoin:round;stroke-width:2px;}.cls-1{stroke-linecap:round;}</style> </defs> <g id="free-shipping"> <circle class="cls-1" cx="53" cy="17" r="2"></circle> <circle cx="45.5" cy="23.5" r="1.0691"></circle> <circle cx="16.5" cy="14.5" r="1.0691"></circle> <polyline class="cls-1" points="53.934 54 61 54 61 43.485 54 40 49.476 31 39.173 31"></polyline> <line class="cls-1" x1="20.6727" x2="44.1886" y1="54" y2="54"></line> <polyline class="cls-1" points="10.748 24 3 24 3 54 10.894 54"></polyline> <polyline class="cls-1" points="39 49 39 24 32.161 24"></polyline> <line class="cls-1" x1="43" x2="45" y1="44" y2="44"></line> <circle class="cls-1" cx="49.0802" cy="54.75" r="4.75"></circle> <circle class="cls-1" cx="15.7406" cy="54.75" r="4.75"></circle> <polyline class="cls-1" points="26 37 23 37 23 43 26 43"></polyline> <line class="cls-1" x1="26" x2="23" y1="40" y2="40"></line> <polyline class="cls-1" points="32 37 29 37 29 43 32 43"></polyline> <line class="cls-1" x1="32" x2="29" y1="40" y2="40"></line> <polyline class="cls-1" points="13 37 10 37 10 43"></polyline> <line class="cls-1" x1="13" x2="10" y1="40" y2="40"></line> <path class="cls-1" d="M16,43V37h2.6439A1.3562,1.3562,0,0,1,20,38.3561v.2878A1.3562,1.3562,0,0,1,18.6439,40H17l3,3"></path> <path class="cls-1" d="M31.5561,22.7505,27.623,17.8342a2.0742,2.0742,0,0,0-2.598-.5845,2.001,2.001,0,0,0-.5919,3l1.4,1.75H12.9946a2,2,0,0,0-2,2h0a2,2,0,0,0,2,2H25.8335l-1.317,1.6462a2.1129,2.1129,0,0,0,.2609,2.9407,2,2,0,0,0,2.7787-.3374l4-5A2,2,0,0,0,31.5561,22.7505Z"></path> <line class="cls-1" x1="33" x2="30" y1="7" y2="10"></line> <line class="cls-1" x1="30" x2="33" y1="7" y2="10"></line> <line class="cls-2" x1="39" x2="54" y1="40" y2="40"></line> <line class="cls-2" x1="3" x2="61" y1="50" y2="50"></line> </g> </g></svg>
+        <p class="font-serif text-xl"><b>Free</b> Shipping</p>
+    </div>
+    <div class="flex-col">
+        <svg height="6rem" width="6.5rem" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M731.44 548.57L548.58 649.14v201.14l182.86 100.57L914.3 850.29V649.14L731.44 548.57z m109.72 258.47l-109.71 60.34-109.71-60.34V692.39l109.71-60.34 109.71 60.34v114.65z" fill="#0F1F3C"></path><path d="M676.58 749.71c0 30.3 24.56 54.86 54.86 54.86s54.86-24.56 54.86-54.86-24.56-54.86-54.86-54.86-54.86 24.57-54.86 54.86z m73.15 0c0 10.08-8.2 18.29-18.29 18.29s-18.29-8.2-18.29-18.29 8.2-18.29 18.29-18.29 18.29 8.21 18.29 18.29zM219.52 475.38h219.43v73.14H219.52z" fill="#0F1F3C"></path><path d="M182.62 366.27h585.62v142.91h73.14V145.62c0-39.96-32.5-72.48-72.46-72.48h-27.36c-29.2 0-55.05 16.73-65.88 42.59-5.71 13.61-27.84 13.64-33.55 0-10.86-25.88-36.71-42.59-65.89-42.59h-18.16c-29.2 0-55.05 16.73-65.87 42.59-5.71 13.61-27.84 13.64-33.55 0-10.86-25.88-36.71-42.59-65.89-42.59h-17.43c-29.2 0-55.05 16.73-65.88 42.59-5.71 13.61-27.84 13.64-33.55 0-10.87-25.87-36.73-42.59-65.91-42.59h-27.57c-39.96 0-72.48 32.52-72.48 72.48v805.12h401.21V877.6h-328.1l-0.44-511.33zM208.43 144c14.27 34.07 47.32 56.09 84.23 56.09 36.89 0 69.95-22 82.66-53.8l15.86-2.29c14.27 34.07 47.32 56.09 84.23 56.09 36.89 0 69.95-22 82.66-53.8l16.59-2.29c14.27 34.07 47.32 56.09 84.23 56.09 36.89 0 69.95-22 82.66-53.8l26.68-0.66v147.5H182.56l-0.12-146.84 25.99-2.29z" fill="#0F1F3C"></path></g></svg>
+        <p class="font-serif text-xl"><b>GST</b> billing</p>
+    </div>
+
+</div>
+<h1 class="text-2xl ml-6 mt-10">Shop by <b class="border-b-2 border-orange-500">Lifestyle</b></h1>
+<div class="flex">
+    <div class="rounded-md h-96 ml-10">
+        <a href="https://www.boat-lifestyle.com/collections/fitness-freak"><img height="350rem" width="350rem" src="assets/man1.png"></a>
+        <b class="text-2xl flex justify-center">For Fitness</b>
+        <a href="https://www.boat-lifestyle.com/collections/fitness-freak"><b class="text-blue-600 text-[1rem] flex justify-center">View all <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+    <div class="rounded-md h-96 ml-10">
+        <a href="https://www.boat-lifestyle.com/collections/party-animals"><img height="350rem" width="350rem" src="assets/man2.png"></a>
+        <b class="text-2xl flex justify-center">For Parties</b>
+        <a href="https://www.boat-lifestyle.com/collections/party-animals"><b class="text-blue-600 text-[1rem] flex justify-center">View all <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+    <div class="rounded-md h-96 ml-10">
+        <a href="https://www.boat-lifestyle.com/collections/workaholic"><img height="350rem" width="350rem" src="assets/man3.png"></a>
+        <b class="text-2xl flex justify-center">For Work</b>
+        <a href="https://www.boat-lifestyle.com/collections/workaholic"><b class="text-blue-600 text-[1rem] flex justify-center">View all <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+    <div class="rounded-md h-56 ml-10">
+        <a href="https://www.boat-lifestyle.com/collections/audiophille"><img height="350rem" width="350rem" src="assets/man4.png"></a>
+        <b class="text-2xl flex justify-center">For Audiophiles</b>
+        <a href="https://www.boat-lifestyle.com/collections/audiophille"><b class="text-blue-600 text-[1rem] flex justify-center">View all <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+
+
+</div>
+<h1 class="text-2xl ml-6 mt-64">Best of <b class="border-b-2 border-orange-500">boAt</b></h1>
+<nav class="justify-start space-x-3 flex mx-8 mt-4">
+<button onclick="defaultele()" id= "button1" class="commonbutton hover:cursor-pointer rounded-xl bg-slate-300 w-32 h-10 text-center pt-2 font-bold">Best sellers</button>
+<button onclick="element1()" id= "button2" class="commonbutton hover:cursor-pointer rounded-xl bg-white w-96 h-10 text-center pt-2">Home Theatre Systems & Soundbars</button>
+<button onclick="element2()" id= "button3" class="commonbutton hover:cursor-pointer rounded-xl bg-white w-32 h-10 text-center pt-2">Top Earbuds</button>
+<button onclick="element3()" id= "button4" class="commonbutton hover:cursor-pointer rounded-xl bg-white w-32 h-10 text-center pt-2">Top Watches</button>
+<button onclick="element4()" id= "button5" class="commonbutton hover:cursor-pointer rounded-xl bg-white w-32 h-10 text-center pt-2">Car accessories</button>
+</nav>
+<div class="flex mt-3 ml-5">
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/airdopes-161"><img id= "id1_img" class="object-cover w-full h-full rounded-lg" src="assets/Airdopes161.jpg" alt="Smartwatch"></a>
+        <div id= "id1_playback" class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20"><p>40 hours playback</p></div>
+        <div class="flex-col flex">
+            <p id= "id1_name" class="font-semibold font-sans hover:cursor-pointer">Airdopes 161</p>
+            <b id= "id1_price" class="flex items-center space-x-2"><p>₹999</p> <p id="id1_fakeprice" class="text-gray-400 line-through">  ₹2490</p> <p class="text-green-400">60% off</p></b>
+            <p id= "id1_rating" class="text-yellow-400">⭐4.9</p>
+           <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/boat-airdopes-131-pro-true-wireless-earbuds"><img id= "id2_img" class="object-cover w-full h-full rounded-lg" src="assets/Airdopes131Pro.png" alt="Smartwatch"></a>
+        <div id= "id2_playback" class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20"><p>45 hours playback</p></div>
+        <div class="flex-col flex">
+            <p id= "id2_name" class="font-semibold font-sans hover:cursor-pointer">Airdopes 131 PRO</p>
+            <b id= "id2_price" class="flex items-center space-x-2"><p>₹999</p> <p id="id2_fakeprice" class="text-gray-400 line-through">  ₹2999</p> <p class="text-green-400">67% off</p></b>
+            <p id= "id2_rating" class="text-yellow-400">⭐4.9</p>
+        <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/wave-flex-connect-bt-calling-smartwatch"><img class="object-cover w-full h-full rounded-lg" src="assets/Waveflex_connect.png" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20"><p>BT callingp></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">WaveFlex Connect</p>
+            <b class="flex items-center space-x-2"><p>₹1499</p> <p class="text-gray-400 line-through">  ₹7990</p> <p class="text-green-400">81% off</p></b>
+            <p class="text-yellow-400">⭐4.8</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+    <div class="flex flex-col rounded-lg h-96 w-96 bg-cover">
+        <a href="https://www.boat-lifestyle.com/products/airdopes-141"><img class="object-cover w-full h-full rounded-lg" src="assets/AD_141.png" alt="Smartwatch"></a>
+        <div class="bg-yellow-300 text-center font-bold border-black border-2 w-56 rounded-lg ml-20"><p>120 hours playback</p></div>
+        <div class="flex-col flex">
+            <p class="font-semibold font-sans hover:cursor-pointer">Airdopes 141</p>
+            <b class="flex items-center space-x-2"><p>₹1299</p> <p class="text-gray-400 line-through">  ₹4490</p> <p class="text-green-400">71% off</p></b>
+            <p class="text-yellow-400">⭐4.9</p>
+            <button class="text-white bg-gray-800 border-black rounded-md h-11 w-32 ml-auto mt-[-2rem]">Add to cart</button>
+        </div>
+        
+    </div>
+</div>
+<div>
+
+</div>
+<h1 class="text-2xl ml-6 mt-56">Join the <b class="border-b-2 border-orange-500">Tribe</b></h1>
+<div class="flex mt-3 space-x-9 ml-5">
+    <div class="flex-col">
+    <video class="z-0 flex flex-col rounded-lg h-[31rem] mt-[-1.2rem] w-64 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/airdopes71.mp4" alt="Smartwatch">
+        </video>
+        <div class="ml-[7rem] mt-[-1rem] absolute bg-white"><img class="bg-cover" height="40px" width="40px" src="assets/airdrops71_img.png"></div>
+        <div class="flex-col flex text-center justify-center">
+            <p class="font-semibold font-sans hover:cursor-pointer mt-3">Airdopes 71</p>
+            <b class="flex justify-center text-center space-x-2 mt-3"><p>₹999</p> <p class="text-gray-400 text-center line-through">  ₹3990</p> <p class="text-green-400">75% off</p></b>
+    </div>
+    </div>
+    <div class="flex-col">
+    <video class="flex flex-col rounded-lg h-[30rem] w-64 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/airdrops161pro.mp4" alt="Smartwatch">
+        </video>
+        <div class="ml-[7rem] mt-[-1rem] absolute bg-white"><img class="bg-cover" height="40px" width="40px" src="assets/airdopes161proimg.png"></div>
+        <div class="flex-col flex text-center justify-center">
+            <p class="font-semibold font-sans hover:cursor-pointer mt-3">Airdopes 161 PRO</p>
+            <b class="flex justify-center text-center space-x-2 mt-3"><p>₹1099</p> <p class="text-gray-400 text-center line-through">  ₹4490</p> <p class="text-green-400">76% off</p></b>
+    </div>
+</div>
+    <div class="flex-col">
+   <video class="flex flex-col rounded-lg h-[30rem] w-64 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/Nirvana_Ion_ANC_vid.mp4" alt="Smartwatch">
+        </video>
+        <div class="ml-[7rem] mt-[-1rem] absolute bg-white"><img class="bg-cover" height="30px" width="30px" src="assets/nirvanaionANCimg.png"></div>
+        <div class="flex-col flex text-center justify-center">
+            <p class="font-semibold font-sans hover:cursor-pointer mt-3">Nirvana Ion ANC</p>
+            <b class="flex justify-center text-center space-x-2 mt-3"><p>₹2898</p> <p class="text-gray-400 text-center line-through">  ₹9990</p> <p class="text-green-400">71% off</p></b>
+    </div>
+</div>
+    <div class="flex-col">
+    <video class="flex flex-col rounded-lg h-[31rem] w-64 mt-[-1.2rem] bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg" src="assets/rockers245V2pro.mp4" alt="Smartwatch">
+        </video>
+        <div class="ml-[7rem] mt-[-1rem] absolute bg-white"><img class="bg-cover" height="40px" width="40px" src="assets/rockerz245v2proimg.png"></div>
+        <div class="flex-col flex text-center justify-center">
+            <p class="font-semibold font-sans hover:cursor-pointer mt-3">Rockers 245 V2 PRO</p>
+            <b class="flex justify-center text-center space-x-2 mt-3"><p>₹998</p> <p class="text-gray-400 text-center line-through">  ₹2990</p> <p class="text-green-400">67% off</p></b>
+    </div>
+</div>
+    <div class="flex-col">
+    <video class="flex flex-col rounded-lg h-[30rem] w-64 bg-cover" controls>
+        <source class="object-cover w-full h-full rounded-lg " src="assets/Airdrops131vid.mp4" alt="Smartwatch">
+        </video>
+        <div class="ml-[7rem] mt-[-1rem] absolute bg-white"><img class="bg-cover" height="40px" width="40px" src="assets/airdopes131img.png"></div>
+        <div class="flex-col flex text-center justify-center">
+            <p class="font-semibold font-sans hover:cursor-pointer mt-3">Airdopes 131</p>
+            <b class="flex justify-center text-center space-x-2 mt-3"><p>₹998</p> <p class="text-gray-400 text-center line-through">  ₹2990</p> <p class="text-green-400">67% off</p></b>
+    </div>
+</div>
+</div>
+<h1 class="text-2xl ml-6 mt-10c"><b class="border-b-2 border-orange-500">Blogs</b></h1>
+<nav class="justify-start space-x-0 flex mx-8 mt-4">
+    <button onclick="popular()" id= "popular" class="2ndcommonbutton hover:cursor-pointer rounded-xl bg-slate-300 w-32 h-10 text-center pt-2 font-bold">Popular</button>
+    <button onclick="latest()" id= "latest" class="2ndcommonbutton hover:cursor-pointer rounded-xl bg-white w-32 h-10 text-center pt-2">Latest</button>
+    </nav>
+<div class="flex mt-10">
+    <div class="rounded-md h-96 ml-10 w-[22rem]">
+        <img width="350rem" height="350rem" src="assets/blog1.png">
+        <p class="text-[1rem] text-gray-600">23 Sep 2023</p>
+        <b class="text-xl flex justify-center">The Power of Personalisation: Custom Watch Faces in Wearables</b>
+        <p class="text-[1rem] text-gray-600 font-mono">Check out how with our DIY Watch Face Studio and customisable watch faces are...</p>
+        <a href="https://www.boat-lifestyle.com/blogs/blog/the-power-of-personalisation-custom-watch-faces-in-wearables"><b class="border-1 border-black rounded-xl h-8 mt-2 pt-1 text-[1rem] flex justify-center">Read More <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+    <div class="rounded-md h-96 ml-10 w-[22rem]">
+        <img height="350rem" width="350rem" src="assets/blog2.png">
+        <p class="text-[1rem] text-gray-600">30 Nov 2022</p>
+        <b class="text-xl flex justify-center">Aman Gupta boAt (Shark Tank India 2) Age, Net worth, Email ID,</b>
+        <p class="text-[1rem] text-gray-600 font-mono">We know you keep searching for things on the internet — after all, what better source is there in...</p>
+        <a href="https://www.boat-lifestyle.com/blogs/blog/aman-gupta-boat-shark-tank-india"><b class="border-1 border-black rounded-xl h-8 mt-2 pt-1 text-[1rem] flex justify-center">Read More <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+    <div class="rounded-md h-96 ml-10 w-[22rem]">
+        <img height="350rem" width="350rem" src="assets/blog3.png">
+        <p class="text-[1rem] text-gray-600">8 March 2024</p>
+        <b class="text-xl flex justify-center">How To Create Watch Faces Using The Watch Face Studio</b>
+        <p class="text-[1rem] text-gray-600 font-mono">Why Stick to a few watch faces on your smartwatch when you can many. Check out our...</p>
+        <a href="https://www.boat-lifestyle.com/blogs/blog/how-to-create-watch-faces-using-the-watch-face-studio-for-your-boat-smart-watch"><b class="border-1 border-black rounded-xl h-8 mt-2 pt-1 text-[1rem] flex justify-center">Read More <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+    <div class="rounded-md h-56 ml-10 w-[22rem]">
+        <img height="350rem" width="350rem" src="assets/blog4.png">
+        <p class="text-[1rem] text-gray-600">22 Sep 2023</p>
+        <b class="text-xl flex justify-center">How Custom Watch Faces Enhance Your Daily Routine</b>
+        <p class="text-[1rem] text-gray-600 font-mono">Smartwatches have certainly made our everyday lives easier and more efficient. But it is not...</p>
+        <a href="https://www.boat-lifestyle.com/blogs/blog/how-custom-watch-faces-enhance-your-daily-routine"><b class="border-1 border-black rounded-xl h-8 mt-2 pt-1 text-[1rem] flex justify-center">Read More <svg class="mt-1" height="20px" width="20px" viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z" fill="#000000"> </path> <path d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z" fill="#000000"> </path> </g></svg></b></a>
+    </div>
+</div>
+<h1 class="text-2xl ml-6 mt-10">In the <b class="border-b-2 border-orange-500">Press</b></h1>
+<div class="relative h-[20rem] mt-5 overflow-hidden z-0">
+    <img src="/assets/slide1.png" class="transition-[1s] absolute w-[100%] slide1">
+    <img src="/assets/slide2.png" class="transition-[1s] absolute w-[100%] slide1">
+    <img src="/assets/slide3.png" class="transition-[1s] absolute w-[100%] slide1">
+    <img src="/assets/slide4.png" class="transition-[1s] absolute w-[100%] slide1">
+    <img src="/assets/slide5.png" class="transition-[1s] absolute w-[100%] slide1">
+</div>
+<div class="text-center flex justify-center space-x-5">
+    <button onclick="goPrev1()" class="">
+        <
+    </button>
+    <button onclick="goNext1()">
+        >
+    </button>
+</div>
+<footer class="bg-slate-200 mt-10">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="https://flowbite.com/" class="flex-col space-y-1 justify-start">
+                  <img src="/assets/boAt_logo_small_3067da8c-a83b-46dd-b28b-6ef1e16ccd17_small.png" class="h-16 me-3" alt="FlowBite Logo" />
+                  <p class="text-2xl font-sans font-semibold">Subscribe to our email alerts!</p>
+                  <input placeholder="Enter your email address >" class="w-96 rounded-md h-10 text-start pl-5"></input>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold font-serif uppercase dark:text-white text-black">shop</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/" class="hover:underline">Wired headphones</a>
+                      </li>
+                      <li>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Home audio</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold font-serif uppercase dark:text-white text-black">Help</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Track Your Order</a>
+                      </li>
+                      <li>
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Warranty and Support</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold font-serif uppercase dark:text-white text-black">Comanpy</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline">About boAt</a>
+                      </li>
+                      <li>
+                          <a href="#" class="hover:underline">News</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <div class="flex mt-4 sm:justify-center justify-center sm:mt-0">
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Dribbble account</span>
+              </a>
+          </div>
+          <div class="flex justify-center  font-thin mt-3">
+            <p>Privacy Policy Terms & Conditions</p>
+          </div>
+          <div class="flex justify-center">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><a href="" class="hover:underline">© 2024 Imagine Marketing Limited. All Rights Reserved.
+            </span></div>
+      </div>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+
+</html>
